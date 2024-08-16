@@ -1,7 +1,3 @@
-//З використанням властивостей і методів DOM-елементів, напиши скрипт, який:
-//Порахує й виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
-//Для кожного елемента li.item у списку ul#categories знайде й виведе в консоль текст заголовка елемента (тегу <h2>) і кількість елементів у категорії (усіх <li>, вкладених у нього).
-
 const items = document.querySelector(`#categories`);
 console.log(`Number of categories: ${items.children.length}`);
 
@@ -11,3 +7,28 @@ itemsDescription.forEach(item => {
     console.log(`Category: ${item.firstElementChild.textContent}`);
     console.log(`Elements: ${item.lastElementChild.childElementCount}`);
 });
+
+
+items.style.listStyle = "none";
+items.style.width = "440px";
+items.style.height = "888px";
+items.style.color = "rgba(46, 47, 66, 1)";
+items.style.backgroundColor = "rgba(246, 246, 254, 1)";
+
+const itemList = document.querySelectorAll(".item");
+
+itemList.forEach( item =>{
+item.style.width ="292px";
+item.style.height = "264px";
+item.lastElementChild.style.listStyle = "none";
+item.lastElementChild.style.padding = "0";
+
+
+const liItem = [...item.lastElementChild.children];
+
+liItem.forEach( li =>{
+li.classList.add("item-style")})
+}
+);
+
+

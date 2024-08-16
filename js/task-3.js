@@ -1,5 +1,3 @@
-//Напиши скрипт, який під час набору тексту в інпуті input#name-input (подія input) підставляє його поточне значення в span#name-output як ім’я для привітання. Обов’язково очищай значення в інпуті по краях від пробілів . Якщо інпут порожній або містить лише пробіли, то замість імені у спан має підставлятися рядок "Anonymous".
-
 
 const inputEvent  = document.querySelector("#name-input");
 
@@ -13,3 +11,16 @@ const onFieldInput = () => {
 };
 
 inputEvent.addEventListener (`input`, onFieldInput)
+
+
+inputEvent.style.width= "360px";
+inputEvent.style.height= "40px";
+inputEvent.style.borderRadius = "4px";
+inputEvent.style.border = "1px solid rgba(128, 128, 128, 1)";
+inputEvent.style.fontSize= "16px";
+inputEvent.style.color = "#2e2f42";
+inputEvent.style.paddingLeft = "16px"
+
+const textStyle = outputEvent.parentElement;
+textStyle.classList.add("text-style")
+console.dir(textStyle)

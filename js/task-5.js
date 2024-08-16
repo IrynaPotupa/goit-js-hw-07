@@ -16,3 +16,13 @@ const onBtnClick = () => {
   bgColorSp.textContent = newColor;
 }
 bgColorBt.addEventListener ("click", onBtnClick)
+
+const widgetStyle = document.querySelector(".widget");
+widgetStyle.classList.add("widget-style");
+widgetStyle.firstElementChild.classList.add("widget-text-style");
+widgetStyle.lastElementChild.classList.add("widget-button-style");
+
+
+console.dir(widgetStyle)
+
+

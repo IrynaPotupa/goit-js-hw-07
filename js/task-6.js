@@ -41,3 +41,10 @@ elementsBox.innerHTML = "";
 }
 
 destroyBt.addEventListener(`click`, destroyBoxes);
+
+const controlsStyle = document.querySelector("#controls");
+controlsStyle.classList.add("controls-style");
+elementsBox.classList.add("box-style");
+inputEvent.classList.add("input-style");
+createBt.classList.add("bt-style", "create-bt-style");
+destroyBt.classList.add("bt-style", "destroy-bt-style");

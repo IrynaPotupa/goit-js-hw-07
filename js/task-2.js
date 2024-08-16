@@ -24,11 +24,6 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
-// Напиши скрипт для створення галереї зображень на основі масиву даних. HTML містить список ul.gallery.
-//Використовуй масив об'єктів images для створення елементів <img>, вкладених в <li>.
-// Ти можеш створити й додати HTML-елементи, використовуючи document.createElement() і elem.append() або шаблонні рядки і elem.insertAdjacentHTML().
-// Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
-
 
 const createImgGallery = pictureInfo => {
 
@@ -37,6 +32,8 @@ const createImgGallery = pictureInfo => {
   const createImgEl = document.createElement("img");
   createImgEl.src = pictureInfo.url;
   createImgEl.alt = pictureInfo.alt;
+  createImgEl.style.width = "100%";
+  createImgEl.style.height = "100%";
   createEl.append(createImgEl);
 
   return createEl;
@@ -49,4 +46,23 @@ const imgGallery = document.querySelector('.gallery')
 
 imgGallery.append(...imgGalleryArr);
 
-console.log (imgGallery);
+console.log(imgGallery);
+
+
+
+imgGallery.style.width = "1440px";
+imgGallery.style.height = "848px";
+imgGallery.style.display = "flex";
+imgGallery.style.flexWrap = "wrap";
+imgGallery.style.gap = "24px";
+imgGallery.style.justifyContent= "center";
+imgGallery.style.paddingTop = "100px";
+
+
+const imgStyle = [...imgGallery.children];
+
+imgStyle.forEach( li => {
+  li.classList.add("img-style")}
+);
+
+console.log(imgStyle)

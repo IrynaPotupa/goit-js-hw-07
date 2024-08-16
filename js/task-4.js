@@ -1,11 +1,3 @@
-
-// відправлення форми form.login-form повинна відбуватися за подією submit.
-// Під час відправлення форми сторінка не повинна перезавантажуватися.
-// Якщо при сабміті у формі є незаповнені поля, виводь alert з попередженням про те, що 'All form fields must be filled in'. Не додавай на інпути атрибут required, валідація має відбуватися саме через JS.
-// Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт з двома властивостями, де ключ — це ім'я інпутів, а значення — відповідні значення цих інпутів, очищені від пробілів по краях. Для доступу до елементів форми використовуй властивість elements.
-// При сабміті форми виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
-
-
 const formElement = document.querySelector (".login-form");
 
 const onFormSubmit = event => {
@@ -28,3 +20,26 @@ if (formData.email === "" || formData.password === "") {
 formElement.addEventListener(`submit`, onFormSubmit)
 
 
+formElement.style.width ="408px";
+formElement.style.height = "256px";
+formElement.style.padding = "24px";
+formElement.style.gap = "16px";
+formElement.style.borderRadius = "8px";
+formElement.style.display= "inline-grid";
+formElement.style.background = "rgba(255, 255, 255, 1)";
+
+
+const formStyle = [...formElement.children];
+
+formStyle.forEach(element => {
+    if (element.firstElementChild){
+    element.firstElementChild.style.height= "40px";
+    element.firstElementChild.style.borderRadius= "4px";
+    element.firstElementChild.style.border = "1px solid rgba(128, 128, 128, 1)";
+    }
+    element.classList.add("form-style");
+    formElement.lastElementChild.classList.add("button-style"); 
+});
+
+ 
+ 
